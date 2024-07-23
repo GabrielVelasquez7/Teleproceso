@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleproceso y Teleinformática</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .content-box {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #660018;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .form-container {
+            padding: 20px;
+            border: 1px solid #660018;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        body {
+            zoom: 0.9;
+            background-color: #e8e8e8;
+        }
+
+        .bg-primary {
+            background-color: #660018 !important;
+            border-color: #660018 !important;
+        }
+
+        .btn-primary {
+            background-color: #660018 !important;
+            border-color: #660018 !important;
+        }
+        .nav-link {
+            color: #660018;
+            background-color: #fff;
+            margin-right: 10px;
+        }
+
+        .nav-link.active {
+            color: #fff !important;
+            background-color: #660018 !important;
+        }
+
+        .nav-link:hover {
+            color: #fff !important;
+            background-color: #800020 !important;
+        }
+        .welcome-message {
+            margin-top: 20px;
+            text-align: center;
+            color: #660018;
+        }
+        .welcome-message i {
+            color: #660018;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h2>Teleproceso y Teleinformática</h2>
+    </header>
+
+    <div class="container mt-5">
+        <div class="welcome-message">
+            <i class="fas fa-smile-beam fa-2x"></i>
+            <h4>Bienvenido a la plataforma de archivos importantes</h4>
+            <p>Aquí puedes encontrar documentos, imágenes y videos esenciales para tus tareas.</p>
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="documentos" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">
+                    <i class="fas fa-file-alt"></i> Documentos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="imagenes" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">
+                    <i class="fas fa-image"></i> Imágenes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="videos" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">
+                    <i class="fas fa-video"></i> Videos
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active content-box" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <h3>Documentos Importantes <i class="fas fa-file-alt"></i></h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Documento1.pdf</a></li>
+                    <li><a href="#"><i class="fas fa-file-word"></i> Documento2.docx</a></li>
+                    <li><a href="#"><i class="fas fa-file-excel"></i> Documento3.xlsx</a></li>
+                </ul>
+            </div>
+            <div class="tab-pane fade content-box" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <h3>Imágenes <i class="fas fa-image"></i></h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-image"></i> Imagen1.jpg</a></li>
+                    <li><a href="#"><i class="fas fa-file-image"></i> Imagen2.png</a></li>
+                    <li><a href="#"><i class="fas fa-file-image"></i> Imagen3.gif</a></li>
+                </ul>
+            </div>
+            <div class="tab-pane fade content-box" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <h3>Videos <i class="fas fa-video"></i></h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-video"></i> Video1.mp4</a></li>
+                    <li><a href="#"><i class="fas fa-file-video"></i> Video2.avi</a></li>
+                    <li><a href="#"><i class="fas fa-file-video"></i> Video3.mkv</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Verificar la sesión al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            var isAuthenticated = localStorage.getItem('authenticated');
+            if (!isAuthenticated) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>
